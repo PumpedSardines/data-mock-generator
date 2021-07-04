@@ -1,0 +1,26 @@
+{
+  "name": "data-mock-generator",
+  "version": "1.0.0",
+  "description": "A mocker to create dummy data for databases in development",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PumpedSardines/mongo-mocker.git"
+  },
+  "keywords": [
+    "mongo",
+    "mock",
+    "testing",
+    "test",
+    "unit testing"
+  ],
+  "author": "Fritiof Rusck <fritiof@rusck.se>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PumpedSardines/mongo-mocker/issues"
+  },
+  "homepage": "https://github.com/PumpedSardines/mongo-mocker#readme"
+}
