@@ -2,13 +2,17 @@
   "name": "data-mock-generator",
   "version": "1.0.0",
   "description": "A mocker to create dummy data for databases in development",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --watchAll --verbose"
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "lint": "eslint . --ext .ts,.tsx",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PumpedSardines/mongo-mocker.git"
+    "url": "git+https://github.com/PumpedSardines/data-mock-generator.git"
   },
   "keywords": [
     "mongo",
@@ -17,10 +21,39 @@
     "test",
     "unit testing"
   ],
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ]
+  },
   "author": "Fritiof Rusck <fritiof@rusck.se>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PumpedSardines/mongo-mocker/issues"
+    "url": "https://github.com/PumpedSardines/data-mock-generator/issues"
   },
-  "homepage": "https://github.com/PumpedSardines/mongo-mocker#readme"
+  "homepage": "https://github.com/PumpedSardines/data-mock-generator#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.11",
+    "@types/is-function": "^1.0.0",
+    "@types/is-object": "^1.0.1",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.170",
+    "@types/random-seed": "^0.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.30.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.6",
+    "jest-extended": "^0.11.5",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "is-function": "^1.0.2",
+    "is-object": "^1.0.2",
+    "lodash": "^4.17.21",
+    "random-seed": "^0.3.0",
+    "slugify": "^1.5.3"
+  }
 }
